@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='ngrepeat'>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="filter.js"></script>
+    <style>body {font-size: 2em;}</style>
+    <head>
+        <title>ng-repeat</title>
+    </head>
+    <body>
+        <h3>ng-repeat</h3>
+        <div ng-controller='repeat'>
+    <!--   <h3> shopping#1</h3>
+        <ul>
+            <li ng-repeat=" item in shopping1">{{item}}</li>
+        </ul>--> 
+
+
+  <!--      <h3> shopping#2</h3>
+        <ul>
+            <li ng-repeat="item in shopping2">buy {{item.name}} of {{item.quantity}}</li>
+        </ul>-->
+
+ <!--       <h3> shopping#3</h3>
+        <input type="text" ng-model="shopping2[0].quantity">
+        <li ng-repeat="item in shopping2">{{$index+1}}.buy {{item.name}} of {{item.quantity}} </li>
+
+        <input type="text" ng-model="newitemname " placeholder="item name">
+        <input type="text" ng-model="newitemquantity" placeholder="item quantity">
+        <button ng-click="addlist()">add</button>-->
+
+        <h3> filter</h3>
+        <input type="text" ng-model="search">
+        <li ng-repeat="item in shopping1 | filter : search">{{item}}</li>
+
+        </div>
+    </body>
+
+</html>
